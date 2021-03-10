@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:#222;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg) translate3d(0,0,0);
+    width: 40px;
+    height: 40px;
+   animation: animate 1.2s ease-in-out infinite;    
+
+}
+@keyframes animate{
+    0%,10%,100%{
+
+     width: 40px;
+     height: 40px;
+    }
+    60%{
+
+     width: 70px;
+     height: 70px;
+
+    }
+}
+.container span{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    animation: spanAnimate 1.2s both linear infinite;
+}
+
+@keyframes spanAnimate{
+    0%,30%{
+        transform:rotate(0deg);
+    }
+    65%{
+        transform:rotate(-30deg);
+    }
+}
+
+.container span:nth-child(1){
+    top: 0;
+    left: 0;
+    background: rgb(255, 196, 0);
+}
+.container span:nth-child(2){
+    top: 0;
+    right: 0;
+    background: rgb(174, 0, 255);
+}
+.container span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 132, 255, 0.897);
+}
+.container span:nth-child(4){
+    bottom: 0;
+    right: 0;
+    background: rgb(255, 0, 191);
+}
